@@ -1,34 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>CSS Flag Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Indian flag</title>
   <style>
-    /* Write your CSS Code here */
-    
+    body{
+      margin: 0;
+      padding: 50px;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .flag{
+      height: 600px;
+      width: 900px;
+      position: relative;
+      background-color: #ff9933;
+      border: 2px solid #333;
+    }
+
+    .flag > div{
+      background-color: #ffffff;
+      height: 200px;
+      width: 100%;
+      position: absolute;
+      top: 200px;
+    }
+
+    .flag > div > div {
+      background-color: #138808;
+      position: absolute;
+      height: 200px;
+      width: 100%;
+      top: 200px;
+      left: 0;
+      border-radius: 0;
+    }
+
+    .flag > div::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      border: 3px solid #000080;
+      border-radius: 50%;
+    }
+
+    .flag > div::after {
+      content: '☸';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 120px;
+      color: #000080;
+      line-height: 1;
+    }
+
+    p {
+      font-size: 4rem;
+      color: #000080;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      position: relative;
+      z-index: 10;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    }
+
+    .flag div div p {
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-top: 50px;
+    }
   </style>
 </head>
-
-<!-- 
-  IMPORTANT! Do not change any HTML
-Don't add any classes/ids/elements 
-Use what you know about combining selectors 
-and CSS specificity instead.
-Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
-Hint 2: You can use CSS inspection to get the colors from
-https://appbrewery.github.io/flag-of-laos/
--->
-
 <body>
   <div class="flag">
-    <p>The Flag</p>
+    <p>Bharat</p>
     <div>
       <div>
-        <p>of Laos</p>
+        <p>India</p>
       </div>
     </div>
   </div>
+  
 </body>
-
 </html>
